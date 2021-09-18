@@ -5,12 +5,10 @@ import apap.tutorial.kebunsafari.service.KebunSafariService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
-import java.util.ArrayList;
 
 @Controller
 public class KebunSafariController {
@@ -22,12 +20,16 @@ public class KebunSafariController {
             @RequestParam (value="id", required = true) String idKebunSafari,
             @RequestParam (value="nama", required = true) String namaKebunSafari,
             @RequestParam (value="alamat", required = true) String alamat,
-            @RequestParam (value="noTelepon", required = true) String noTelepon,
+            @RequestParam (value="noTelepon", required = false, defaultValue = "-") String noTelepon,
             Model model
     ){
+//        if(noTelepon == null){
+//            noTelepon = "-";
+//        }
         KebunSafariModel kebunSafari = new KebunSafariModel(idKebunSafari, namaKebunSafari, alamat, noTelepon);
 
         kebunSafariService.addKebunSafari(kebunSafari);
+
 
         model.addAttribute("kebunSafari", kebunSafari);
 
@@ -86,6 +88,16 @@ public class KebunSafariController {
         }
         return "delete-kebun-safari";
     }
+    // demo
+
+    // url
+    // http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung%20Fasilkom&noTelepon=081xxx
+    // http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung%20Fasilkom
+    // http://localhost:8080/
+    // http://localhost:8080/kebun-safari/view/1
+    // http://localhost:8080/kebun-safari/update/1?noTelepon=021752xxxx
+    // http://localhost:8080/kebun-safari/delete/1
+    // http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung
 
 
 }
