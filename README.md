@@ -5,6 +5,18 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 2
+### Jawaban Pertanyaan
+1. Pada nomor 1 akan terjadi error saat mencoba menambahkan sebuah kebun karena template dari "add-kebun-safari" belum terbuat
+2. @Autowired merupakan implementasi dari konsep Depedency Injection. @Autowired mengisi (inject) semua kebutuhan dari class tersebut (dependency).
+Dengan adanya anotasi @Autowired, class Controller tidak perlu setter method atau argumen untuk constructor
+3. Pada nomor 3 akan terjadi error saat menambahkan sebuah kebun tanpa parameter nomor telepon karena dalam method addKebun seluruh parameter di set required=true.
+   Sehingga jika salah satu parameter tidak di-define maka tidak bisa menambah kebun safari yang baru
+4. Karena kebun safari dengan nama Papa APAP memiliki id=1. Maka cara aksesnya adalah http://localhost:8080/kebun-safari/?id=1.
+   Dengan memanfaatkan method getKebunSafariById
+5. Pada localhost:8080 akan menampilkan daftar seluruh kebun safari yang sudah didaftarkan beserta informasi detail mengenai kebun tersebut.
+   Berikut link untuk melihat hasil screenshot https://s.id/G6Bph
+---
 ## Tutorial 1
 ### What I have learned today
 Setelah mengerjakan Tutorial 1, saya perlu lebih teliti dalam mengerjakan tutorial selanjutnya dan harus membiasakan diri menggunakan IDE yang baru dan Spring Boot
@@ -24,4 +36,3 @@ Maven adalah software project management berdasarkan Project Object Model (POM),
    framework? Mengembangkan aplikasi enterprise-class 
 7. Apa perbedaan dari @RequestParam dan @PathVariable? Kapan sebaiknya
    menggunakan @RequestParam atau @PathVariable? @PathVariable membaca value dari URI path. Sementara @RequestParam di-encoded. @PathVariable digunakan untuk data yang dikirimkan dalam URI Sementara @RequestParam digunakan untuk mengekstrak data yang ditemukan dalam query
-
