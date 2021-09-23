@@ -5,6 +5,31 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 3
+### Jawaban Pertanyaan
+1. Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model
+   (@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)  
+@AllArgsConstructor menghasilkan semua constructor yang membutuhkan argumen; @NoArgsConstructor menghasilkan semua noArgs constructor;
+@Setter menghasilkan setter secara otomatis; @Getter menghasilkan getter secara otomatis; @Entity membuat suatu class ditentukan menjadi entitas;
+@Table berguna untuk menentukan detail table yang digunakan untuk entitas dalam database
+2. Pada class CabangDB, terdapat method findByNoCabang, apakah kegunaan dari method
+   tersebut?  
+Kegunaan dari method findByNoCabang adalah untuk mencari Cabang berdasarkan nomor cabang yang diberikan
+3. Jelaskan perbedaan kegunaan dari anotasi @JoinTable dan @JoinColumn  
+@JoinTable digunakan untuk pemetaan many-to-many dan one-to-many  
+@JoinColumn digunakan untuk membuat gabungan beberapa kolom
+4. Pada class PegawaiModel, digunakan anotasi @JoinColumn pada atribut cabang, apa
+   kegunaan dari name, referencedColumnName, dan nullable dalam anotasi tersebut? dan apa
+   perbedaan nullable dan penggunaan anotasi @NotNull  
+name merupakan nama dari foreign key; referencedColumnName merupakan nama dari kolom yang direferenced oleh foreign key;
+nullable digunakan untuk menentukan apakah foreign key nullable atau tidak; @NotNull digunakan agar column tersebut tidak bisa null
+5. Jelaskan kegunaan FetchType.LAZY, CascadeType.ALL, dan FetchType.EAGER  
+FetchType.LAZY untuk mengambil entitas pada database seefisien mungkin  
+FetchType.EAGER untuk mengambil seluruh elemen dari relationship ketika memilih root entity  
+CascadeType.ALL cascade semua operasi entity manager(PERSIST, REMOVE, REFRESH, MERGE, DETACH)
+
+
+---
 ## Tutorial 2
 ### Jawaban Pertanyaan
 1. Pada nomor 1 akan terjadi error saat mencoba menambahkan sebuah kebun karena template dari "add-kebun-safari" belum terbuat
