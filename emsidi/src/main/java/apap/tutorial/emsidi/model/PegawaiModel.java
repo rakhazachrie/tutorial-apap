@@ -25,7 +25,7 @@ public class PegawaiModel implements Serializable{
 
     @NotNull
     @Size(max=30)
-    @Column(name="nama_pegawai", nullable = false)
+    @Column(name="nama_pegawai", nullable = false, unique = true)
     private String namaPegawai;
 
     @NotNull

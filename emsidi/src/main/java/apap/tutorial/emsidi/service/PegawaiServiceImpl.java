@@ -16,7 +16,9 @@ public class PegawaiServiceImpl implements PegawaiService {
     PegawaiDb pegawaiDb;
 
     @Override
-    public void addPegawai(PegawaiModel pegawai) { pegawaiDb.save(pegawai); }
+    public void addPegawai(PegawaiModel pegawai) {
+        pegawaiDb.save(pegawai);
+    }
 
     @Override
     public void updatePegawai(PegawaiModel pegawai) {

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.time.LocalTime;
+import java.util.List;
 
 @Controller
 public class PegawaiController {
@@ -28,12 +29,13 @@ public class PegawaiController {
 
     @GetMapping("pegawai/add/{noCabang}")
     public String addPegawaiForm(@PathVariable Long noCabang, Model model){
-        PegawaiModel pegawai = new PegawaiModel();
-        CabangModel cabang = cabangService.getCabangByNoCabang(noCabang);
-        pegawai.setCabang(cabang);
-        model.addAttribute("noCabang", noCabang);
-        model.addAttribute("pegawai", pegawai);
-        return "form-add-pegawai";
+            PegawaiModel pegawai = new PegawaiModel();
+            CabangModel cabang = cabangService.getCabangByNoCabang(noCabang);
+            pegawai.setCabang(cabang);
+            model.addAttribute("noCabang", noCabang);
+            model.addAttribute("pegawai", pegawai);
+            return "form-add-pegawai";
+
     }
 
     @PostMapping("pegawai/add")
