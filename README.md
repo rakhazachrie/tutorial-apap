@@ -5,6 +5,19 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 4
+### Jawaban Pertanyaan
+1. Jelaskan perbedaan th:include dan th:replace!  
+th:include -- menyisipkan fragment yang ditentukan sebagai body dari host tag termasuk fragment tag.  
+th:replace -- menggantikan host tag dengan fragment. Sehingga menghapus host tag dan menggantikannya 
+dengan fragment yang sudah ditentukan.  
+2. Jelaskan apa fungsi dari th:object!  
+th:object berfungsi untuk menginisiasi objek agar data tersebut bisa diterima Spring.  
+3. Jelaskan perbedaan dari * dan $ pada saat penggunaan th:object! Kapan harus dipakai?  
+'$' merupakan variable expression yang digunakan untuk menginisiasi variable yang dikirimkan controller.  
+'*' merupakan selection expression yang digunakan untuk mengambil data yang di-declare sebelumnya.
+
+---
 ## Tutorial 3
 ### Jawaban Pertanyaan
 1. Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model

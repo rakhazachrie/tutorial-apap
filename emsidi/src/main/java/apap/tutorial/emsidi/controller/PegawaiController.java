@@ -71,7 +71,7 @@ public class PegawaiController {
         if(val < 0 || val2 > 0){
             pegawaiService.updatePegawai(pegawai);
             model.addAttribute("noPegawai", pegawai.getNoPegawai());
-            return "update-cabang";
+            return "update-pegawai";
 
         }
         else {
@@ -103,6 +103,22 @@ public class PegawaiController {
             return "errorMsgDelete";
         }
 
+    }
+    @PostMapping("/pegawai/delete")
+    public String deletePegawaiSubmit(
+            @ModelAttribute CabangModel cabang,
+            Model model
+    ){
+        LocalTime now = LocalTime.now();
+        model.addAttribute("cabang", cabang);
+        if(now.isBefore(cabang.getWaktuBuka()) || now.isAfter(cabang.getWaktuTutup())){
+            for (PegawaiModel pegawai: cabang.getListPegawai()) {
+                model.addAttribute("noCabang", pegawai.getCabang().getNoCabang());
+                pegawaiService.deletePegawai(pegawai);
+            }
+            return "delete-pegawai";
+        }
+        return "errorMsgDelete";
     }
 }
 
