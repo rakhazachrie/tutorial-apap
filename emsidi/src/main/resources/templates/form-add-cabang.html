@@ -31,8 +31,34 @@
                     <input required class="form-control" type="time" name="waktuTutup" />
                     <br><br>
 
-                    <button class="btn btn-primary" type="submit">Submit</button>
-                    <a class="btn btn-primary" href="/">Cancel</a>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Nama Menu</th>
+                            <th>
+                                <a class="mx-2 btn btn-dark" th:href="@{/addmenu(temp=${temp})}">Tambah Row</a>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="order : ${temp}">
+                            <td>
+                                <select name="listMenu">
+                                    <div th:each="menu : ${allMenu}" th:object="${order}">
+                                        <option th:text="${menu.namaMenu}" th:value="${menu.noMenu}"></option>
+                                    </div>
+                                </select>
+                            </td>
+                            <td>
+                                <a class="mx-2 btn btn-dark" th:href="@{/removemenu(temp=${temp})}">Hapus</a>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                    <button class="mx-2 btn btn-dark" type="submit">Submit</button>
+                    <a class="mx-2 btn btn-dark" href="/">Cancel</a>
                 </form>
             </div>
         </div>
