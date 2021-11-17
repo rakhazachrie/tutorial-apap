@@ -5,6 +5,27 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 5
+### Jawaban Pertanyaan
+1. Apa itu Postman? Apa Kegunaannya?  
+Postman adalah platform API untuk membuat dan menggunakan API. Postman menyederhanakan tiap langkah pada API
+lifecycle. API memiliki fitur API repository, tools, Intelligence, workspaces, dan integrations. Postman digunakan untuk
+melakukan testing API.
+2. Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty.  
+@JsonIgnoreProperties digunakan pada class untuk menandai atribut/properti atau daftar properti
+yang akan diabaikan.  
+@JsonProperty digunakan untuk memetakan nama properti dengan kunci JSON pada serialization
+atau menunjukkan nama properti di JSON.  
+3. Apa kegunaan atribut WebClient?  
+WebClient digunakan untuk melakukan HTTP request. WebClient merupakan bagian dari Spring's
+web reactive framework. WebClient juga digunakan untuk membangun aplikasi yang reactive dan
+non-blocking.
+4. Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?  
+ResponseEntity mewakili seluruh respon pada HTTP yaitu body, header, dan status. ResponseEntitiy
+digunakan untuk mengontrol respon HTTP seperti header dan status.  
+BindingResult adalah objek dari Spring yang menyimpan hasil validasi dan berisi error yang mungkin terjadi.
+
+
 ## Tutorial 4
 ### Jawaban Pertanyaan
 1. Jelaskan perbedaan th:include dan th:replace!  
@@ -16,7 +37,6 @@ th:object berfungsi untuk menginisiasi objek agar data tersebut bisa diterima Sp
 3. Jelaskan perbedaan dari * dan $ pada saat penggunaan th:object! Kapan harus dipakai?  
 '$' merupakan variable expression yang digunakan untuk menginisiasi variable yang dikirimkan controller.  
 '*' merupakan selection expression yang digunakan untuk mengambil data yang di-declare sebelumnya.
-
 ---
 ## Tutorial 3
 ### Jawaban Pertanyaan
