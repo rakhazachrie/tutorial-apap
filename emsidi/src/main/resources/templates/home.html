@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -10,34 +10,11 @@
 
 <body>
 <nav th:replace="fragments/fragment :: navbar('Home')"></nav>
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-danger">-->
-<!--    <a class="navbar-brand font-weight-bold text-light" href="/">Emsidi</a>-->
-<!--    <button-->
-<!--        class="navbar-toggler"-->
-<!--        type="button"-->
-<!--        data-toggle="collapse"-->
-<!--        data-target="#navbarNavAltMarkup"-->
-<!--        aria-controls="navbarNavAltMarkup"-->
-<!--        aria-expanded="false"-->
-<!--        aria-label="Toggle navigation"-->
-<!--    >-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
-<!--    <div class="collapse navbar-collapse">-->
-<!--        <ul class="navbar-nav mr-auto">-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="/">Home</a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--        <form class="form-inline my-2 my-lg-0" th:action="@{/cabang/view}" method="GET">-->
-<!--            <input class="form-control mr-sm-2" type="search"-->
-<!--                   name="noCabang" placeholder="No Cabang" aria-label="Search">-->
-<!--            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</nav>-->
 <div class="d-flex justify-content-center">
     <div class="m-4">
+        <div class="d-flex justify-content-center">
+            <h2 th:text="'Hello ' + ${#httpServletRequest.remoteUser} + '!'">Login as</h2>
+        </div>
         <h2>Selamat Datang di Emsidi!</h2>
         <div class="d-flex justify-content-center">
             <a th:href="@{/cabang/viewall}" class="mx-2 btn btn-dark">Lihat semua cabang</a>
@@ -45,7 +22,16 @@
         </div>
         <div class="my-3 d-flex justify-content-center">
             <a th:href="@{/menu/viewall}" class="mx-2 btn btn-dark">Lihat semua menu</a>
-            <a th:href="@{/menu/add}" class="mx-2 btn btn-outline-dark">Tambah menu</a>
+            <a sec:authorize="hasAuthority('Manajer')" th:href="@{/menu/add}" class="mx-2 btn btn-outline-dark">Tambah menu</a>
+        </div>
+
+        <div class="my-3 d-flex justify-content-center">
+            <a sec:authorize="hasAuthority('Admin')" th:href="@{/user/viewall}" class="mx-2 btn btn-dark">Lihat semua user</a>
+            <a sec:authorize="hasAuthority('Admin')" th:href="@{/user/add}" class="mx-2 btn btn-outline-dark">Tambah user</a>
+        </div>
+
+        <div class="my-3 d-flex justify-content-center">
+            <a th:href="@{/user/updatePass/} + ${#httpServletRequest.remoteUser}" class="mx-2 btn btn-dark">Update Password</a>
         </div>
     </div>
 </div>
