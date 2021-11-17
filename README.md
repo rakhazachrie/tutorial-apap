@@ -24,6 +24,19 @@ non-blocking.
 ResponseEntity mewakili seluruh respon pada HTTP yaitu body, header, dan status. ResponseEntitiy
 digunakan untuk mengontrol respon HTTP seperti header dan status.  
 BindingResult adalah objek dari Spring yang menyimpan hasil validasi dan berisi error yang mungkin terjadi.
+
+
+## Tutorial 4
+### Jawaban Pertanyaan
+1. Jelaskan perbedaan th:include dan th:replace!  
+th:include -- menyisipkan fragment yang ditentukan sebagai body dari host tag termasuk fragment tag.  
+th:replace -- menggantikan host tag dengan fragment. Sehingga menghapus host tag dan menggantikannya 
+dengan fragment yang sudah ditentukan.  
+2. Jelaskan apa fungsi dari th:object!  
+th:object berfungsi untuk menginisiasi objek agar data tersebut bisa diterima Spring.  
+3. Jelaskan perbedaan dari * dan $ pada saat penggunaan th:object! Kapan harus dipakai?  
+'$' merupakan variable expression yang digunakan untuk menginisiasi variable yang dikirimkan controller.  
+'*' merupakan selection expression yang digunakan untuk mengambil data yang di-declare sebelumnya.
 ---
 ## Tutorial 3
 ### Jawaban Pertanyaan

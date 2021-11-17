@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
 <head>
   <title>Emsidi</title>
   <object th:include="fragments/fragment :: css" th:remove="tag"></object>
@@ -7,17 +8,19 @@
 </head>
 
 <body>
-<nav th:replace="fragments/fragment :: navbar('Cabang')"></nav>
+<nav th:replace="fragments/fragment :: navbar('Menu')"></nav>
 <div class="container">
   <div class="card m-4 p-4">
     <div class="card-body">
       <div class="justify-content-center">
-        <h2 th:text="'Pegawai dengan nomor ' + ${noPegawai} + ' berhasil diubah'"></h2>
-        <a class="btn btn-primary" href="/">Kembali ke Home</a>
+        <h2 th:text="'Menu dengan nomor menu ' + ${noMenu} + ' berhasil ditambahkan.'"></h2>
+        <br>
+        <a class="mx-2 btn btn-dark" href="/">Home</a>
       </div>
     </div>
   </div>
 </div>
 
 </body>
+
 </html>
