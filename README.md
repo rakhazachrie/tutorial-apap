@@ -5,6 +5,26 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 7
+### Jawaban Pertanyaan
+1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot
+sebagai ilustrasi dari apa yang Anda jelaskan.  
+> Nomor 1 -> Pada remove item, melakukan fungsi yang sebaliknya dari add item dan mengatur list removeItems agar saat penghapusan item menjadi sesuai  
+Nomor 2 -> Mengatur balance pada saat melakukan add dan remove item. Pada saat add item, maka newBalance = balance - price. Pada saat remove item, maka newBalance = balance + price  
+Nomor 3 -> Membuat if-else apabila balance < 0 maka akan menampilkan alert dan barang tidak bisa ditambahkan ke keranjang
+2. Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan
+props?  
+> State dan props melakukan fungsi yang sama tetapi digunakan dengan cara yang berbeda. Props digunakan untuk pass data dari
+parent ke child atau dari komponen itu sendiri dan immutable. State digunakan untuk data yang mutable atau data yang akan berubah
+3. Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam
+React? sebutkan alasannya.  
+> Karena component merupakan elemen React yang independen dan reusable. Component bekerja seperti JS function dan mengembalikan HTML
+4. Apa perbedaan class component dan functional component?  
+> Class component secara sederhana adalah class yang dibentuk dari berbagai function. Functional component adalah JavaScript functions. Class component mengharuskan extend dari React, harus menggunakan method render() untuk mengembalikan html, dan membutuhkan contructor untuk dapat men-store state
+5. Dalam react, apakah perbedaan component dan element?  
+> Element adalah objek sederhana yang mendeskripsikan atributnya dan objek yang immutable. Component adalah function atau class yang menerima input dan mengembalikan react element. Menyimpan reference ke DOM nodes dan instance dari child component
+---
+
 ## Tutorial 6
 ### Jawaban Pertanyaan
 1. Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode
