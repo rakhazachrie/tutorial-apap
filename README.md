@@ -5,6 +5,28 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 6
+### Jawaban Pertanyaan
+1. Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode
+   yang telah anda buat) konsep tersebut diimplementasi?  
+Otentikasi adalah proses memverifikasi siapa seseorang, sedangkan Otorisasi adalah proses memverifikasi
+aplikasi, file, dan data spesifik apa yang dapat diakses pengguna. Otentikasi adalah implementasi dari login.
+Sementara otorisasi adalah implementasi dari soal latihan nomor 1 - 3.  
+2. Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya.  
+BCryptPasswordEncoder adalah implementasi PasswordEncoder yang menggunakan fungsi hashing kuat BCrypt.
+Cara kerjanya adalah encode raw password. Generally, a good encoding algorithm applies a SHA-1 or greater hash 
+combined with an 8-byte or greater randomly generated salt.  
+3. Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa
+   demikian?  
+Penyimpanan password sebaiknya menggunakan hashing. Hashing cocok untuk validasi password karena 'one-way' function. 
+Mustahil untuk decrypt hash dan mendapatkan plain password.  
+4. Jelaskan secara singkat apa itu UUID beserta penggunaannya!  
+   UUID adalah Universally unique identifier, yang dapat membantu mendapatkan unique id secara universal.
+5. Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut  
+   Class UserDetailsServiceImpl.java digunakan untuk melakukan retrieving data user dari database yang kita miliki, 
+yang kemudian digunakan untuk proses otentikasi.
+
+---
 ## Tutorial 5
 ### Jawaban Pertanyaan
 1. Apa itu Postman? Apa Kegunaannya?  
