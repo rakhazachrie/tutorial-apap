@@ -13,7 +13,7 @@ melakukan langkah - langkah tersebut?
 2. Jelaskan fungsi dari async dan await!
 > Async pada dasarnya memungkinkan kita untuk memiliki sintaks yang lebih baik untuk apa pun yang melakukan operasi asinkron  
 4. Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount.
-> * componentDidMount: method yang memungkinkan kita untuk mengeksekusi kode React ketika komponen sudah ditempatkan di DOM  
+* componentDidMount: method yang memungkinkan kita untuk mengeksekusi kode React ketika komponen sudah ditempatkan di DOM  
 * shouldComponentUpdate: method memungkinkan kita untuk keluar dari react update life cycle untuk menghindari memanggilnya lagi dan lagi pada setiap rendering ulang. Itu hanya memperbarui komponen jika alat peraga yang diteruskan ke sana berubah  
 * componentDidUpdate: method yang memungkinkan kita untuk mengeksekusi react code ketika komponen diperbarui  
 * componentWillReceiveProps: method ini digunakan selama fase update react lifecycle. Fungsi ini umumnya dipanggil jika props yang diteruskan ke component berubah  

@@ -19,11 +19,12 @@ class itemList extends Component {
             description: "",
             category: "",
             quantity: 0,
-            };
-            this.handleChangeField = this.handleChangeField.bind(this);
-            this.handleClickloading = this.handleClickloading.bind(this);
-            this.handleAddItem = this.handleAddItem.bind(this);
-            this.handleCancel = this.handleCancel.bind(this);
+        };
+        this.handleChangeField = this.handleChangeField.bind(this);
+        this.handleClickloading = this.handleClickloading.bind(this);
+        this.handleAddItem = this.handleAddItem.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
+        
     }
 
     componentDidMount() {
@@ -97,7 +98,7 @@ class itemList extends Component {
             alert("Oops terjadi masalah pada server");
             console.log(error);
         }
-        this.handleCancel(event);
+        // this.handleCancel(event);
     }
 
     handleChangeField(event) {
@@ -125,24 +126,25 @@ class itemList extends Component {
                 quantity: 0
             })
             this.loadData();
-        } 
-        catch (error) {
+        } catch (error) {
             alert("Oops terjadi masalah pada server");
             console.log(error);
-        }        
+        }
         this.handleCancel(event);
     }
 
     render() {
         return (
             <div className={classes.itemList}>
-                <h1 className={classes.title}>All Items</h1>
+                <h1 className={classes.title}>
+                    All Items
+                </h1>
                 <Button action={this.handleAddItem}>
-                    Add item
+                    Add Item
                 </Button>
                 <div>
-                {this.state.items.map((item) => (
-                    <Item
+                    {this.state.items.map((item) => (
+                        <Item
                         key={item.id}
                         id={item.id}
                         title={item.title}
@@ -150,8 +152,9 @@ class itemList extends Component {
                         description={item.description}
                         category={item.category}
                         quantity={item.quantity}
-                    />
-                ))}
+                        handleEdit={() => this.handleEditItem(item)}
+                        />
+                    ))}
                 </div>
                 <Modal
                 show={this.state.isCreate || this.state.isEdit}
@@ -202,8 +205,8 @@ class itemList extends Component {
                             onChange={this.handleChangeField}
                         />
                         <Button action={this.state.isCreate
-                                    ? this.handleSubmitItem
-                                    : this.handleSubmitEditItem }
+                            ? this.handleSubmitItem
+                            : this.handleSubmitEditItem}
                         >
                             Create
                         </Button>
