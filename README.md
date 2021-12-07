@@ -5,6 +5,21 @@
 * **Muhammad Rakha Zachrie** - *1906353795* - *A*
 
 ---
+## Tutorial 8
+### Jawaban Pertanyaan
+1. Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian
+melakukan langkah - langkah tersebut?
+> Setelah melakukan .post atau .put saat add dan update, melakukan setState agar seluruh variable kembali default.
+2. Jelaskan fungsi dari async dan await!
+> Async pada dasarnya memungkinkan kita untuk memiliki sintaks yang lebih baik untuk apa pun yang melakukan operasi asinkron  
+4. Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount.
+* componentDidMount: method yang memungkinkan kita untuk mengeksekusi kode React ketika komponen sudah ditempatkan di DOM  
+* shouldComponentUpdate: method memungkinkan kita untuk keluar dari react update life cycle untuk menghindari memanggilnya lagi dan lagi pada setiap rendering ulang. Itu hanya memperbarui komponen jika alat peraga yang diteruskan ke sana berubah  
+* componentDidUpdate: method yang memungkinkan kita untuk mengeksekusi react code ketika komponen diperbarui  
+* componentWillReceiveProps: method ini digunakan selama fase update react lifecycle. Fungsi ini umumnya dipanggil jika props yang diteruskan ke component berubah  
+* componentWillUnmount: method ini memungkinkan kita untuk mengeksekusi React ketika komponen dihancurkan atau dilepas dari DOM. Metode ini dipanggil selama fase Unmount dari React Life-cycle yaitu sebelum komponen dilepas.
+
+---
 ## Tutorial 7
 ### Jawaban Pertanyaan
 1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot
